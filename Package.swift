@@ -3,16 +3,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "SoliticsSDK",
+    name: "SoliticPackage",
     products: [
-        .library(name: "SoliticsSDK", targets: ["SoliticsSDK"])
+        .library(name: "Solitics", targets: ["SoliticsPackage"])
     ],
     dependencies: [
-        .package(id: "swift.solitics", .upToNextMajor(from: "1.0.0"))
+      .package(id: "swift.solitics", exact: "1.0.4")
     ],
     targets: [
-        .target(name: "SoliticsSDK", dependencies: [
-            .product(name: "untitled", package: "swift.solitics")
+        .target(name: "SoliticsPackage", dependencies: [
+          .product(name: "SoliticsPackage", package: "swift.solitics")
         ])
     ]
 )
