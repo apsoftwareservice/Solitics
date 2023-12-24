@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "SoliticsSwiftPackage", targets: ["SoliticsMasterPackage"])
     ],
     dependencies: [
-      .package(id: "swift.solitics", exact: "1.0.5")
+      .package(id: "swift.solitics", exact: "1.0.6")
     ],
     targets: [
         .target(name: "SoliticsMasterPackage", dependencies: [
